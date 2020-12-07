@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "41d1d705-f304-49cd-9380-867fed864464",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/test-crud-8ac0b/us-central1/app/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"test-crud-8ac0b",
+						"us-central1",
+						"app",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Test Delete\",\n    \"lastName\": \"Test Delete\",\n    \"email\": \"test@delete.com\",\n    \"contactNumber\": \"7777788888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/test-crud-8ac0b/us-central1/app/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"test-crud-8ac0b",
+						"us-central1",
+						"app",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Test\",\n    \"lastName\": \"Test\",\n    \"email\": \"test@test.com\",\n    \"contactNumber\": \"8888888888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/test-crud-8ac0b/us-central1/app/users/yPlkZRTiX3lIKH8rgvXK",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"test-crud-8ac0b",
+						"us-central1",
+						"app",
+						"users",
+						"yPlkZRTiX3lIKH8rgvXK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/test-crud-8ac0b/us-central1/app/users/yPlkZRTiX3lIKH8rgvXK",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"test-crud-8ac0b",
+						"us-central1",
+						"app",
+						"users",
+						"yPlkZRTiX3lIKH8rgvXK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/test-crud-8ac0b/us-central1/app/users/3UhSsJLwj9mgQM3TwfQS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"test-crud-8ac0b",
+						"us-central1",
+						"app",
+						"users",
+						"3UhSsJLwj9mgQM3TwfQS"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
