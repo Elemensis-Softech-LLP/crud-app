@@ -12,11 +12,11 @@ const app = express();
 
 app.use(cors({ origin: true }));
 
-app.get('/users',Api.getAllUsers);
-app.post('/users',Api.createUser);
-app.get('/users/:userId',Api.getUserById);
-app.delete('/users/:userId',Api.deleteUser);
-app.put('/users/:userId',Api.updateUser);
+app.get('/users', Api.getAllUsers);
+app.post('/users', Api.createUser);
+app.get('/users/:userId', Api.getUserById);
+app.delete('/users/:userId', Api.deleteUser);
+app.put('/users/:userId', Api.updateUser);
 
 // //add the path to receive request and set json as bodyParser to process the body 
 // app.use('/api/v1', AppRouter);
@@ -28,6 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+
+app.get('/', (req: any, res: any) => {
+  functions.logger.log("Server started ....");
+  return res.status(200).send('Server is running!');
+});
 
 app.get('/hello-world', (req: any, res: any) => {
   return res.status(200).send('Hello World!');
